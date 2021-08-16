@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Curso {
     
+    public static final int MAXIMO_TRIPULANTES = 4;
     private int codigo;
     private String nombre;
     private char jornada;
@@ -21,10 +22,7 @@ public class Curso {
         tripulantes= new ArrayList<>();
     }
 
-    public String agregarTripulante(Tripulante t){
-        tripulantes.add(t);
-        return "Tripulante agregado al curso" + nombre;
-    }
+   
 
     public ArrayList<Tripulante> getTripulantes() {
         return tripulantes;
@@ -58,5 +56,15 @@ public class Curso {
         this.jornada = jornada;
     }
 
+    public String agregarTripulante(Tripulante t){
+
+        if (tripulantes.size() == MAXIMO_TRIPULANTES){
+           return "No se puede agregar mas de " + MAXIMO_TRIPULANTES +"Tripulantes";
+        }   
+            tripulantes.add(t);
+        return "Tripulante agregado al curso" + nombre;
+        
+        
+    }
     
 }

@@ -6,6 +6,8 @@ package model;
  */
 public class Tripulante {
 
+    public final static double NOTA_MAXIMA = 5.0;
+
     /** Atributos 
      * 
     */
@@ -109,13 +111,13 @@ public class Tripulante {
             return nota3;
         }
 
-       /**  if (nota1 >= nota2 && nota1 >= nota3) {
-            return nota1;            
-        }
-        if (nota2 >= nota3 ) {
-            return nota2;          
-        }
-        return nota3;*/
+        //  if (nota1 >= nota2 && nota1 >= nota3) {
+        //     return nota1;            
+        // }
+        // if (nota2 >= nota3 ) {
+        //     return nota2;          
+        // }
+        // return nota3;
     }
 
     public double getLowNote(){
