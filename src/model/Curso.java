@@ -36,4 +36,6 @@ public class Curso {
     public void setJornada(char jornada) {
         this.jornada = jornada;
     }
+
+    
 }
