@@ -169,5 +169,6 @@ public class Tripulante {
         }   
             cursos.add(t);
         return "Curso agregado " + nombre;
+    }  
 
 }

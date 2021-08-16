@@ -13,6 +13,11 @@ public class Formador {
         this.codigo = codigo;
     }
 
+    public Formador() {
+        super();
+        this.codigo= 0;
+        this.nombre = "Jon Due";
+    }
     public int getCodigo() {
         return codigo;
     }

@@ -1,8 +1,17 @@
+import java.util.Scanner;
+
 import model.Curso;
 import model.Tripulante;
+import view.Vista;
 
 public class App {
     public static void main(String[] args)   {
+
+        // Scanner scan = new Scanner(System.in);
+
+        // String nombre =scan.nextLine();
+
+        // System.out.println(nombre);
         
         Curso programacion1 = new Curso(1234, " Fundamentos de programación", 'M', 7400, "dEV 1");
         System.out.println(programacion1.getNombre());
@@ -38,16 +47,27 @@ public class App {
         t5.setNota1(3.4);
         t5.setNota2(4.1);
         t5.setNota3(3.8);
-        System.out.println( programacion1.agregarTripulante(t1));
-        System.out.println( programacion1.agregarTripulante(t2));
-        System.out.println( programacion1.agregarTripulante(t3));
-        System.out.println( programacion1.agregarTripulante(t4));
-        System.out.println( programacion1.agregarTripulante(t5));
-        for (Tripulante desarrollador : programacion1.getTripulantes()) {
-            System.out.println(desarrollador.getNombre());
-            System.out.println("La nota mas alta es: "+ desarrollador.getHighNote());
-        }
+       
+        programacion1.agregarTripulante(t1);
+        programacion1.agregarTripulante(t2);
+        programacion1.agregarTripulante(t3);
+        programacion1.agregarTripulante(t4);
+        programacion1.agregarTripulante(t5);
+        
+        // System.out.println( programacion1.agregarTripulante(t1));
+        // System.out.println( programacion1.agregarTripulante(t2));
+        // System.out.println( programacion1.agregarTripulante(t3));
+        // System.out.println( programacion1.agregarTripulante(t4));
+        // System.out.println( programacion1.agregarTripulante(t5));
+        // for (Tripulante desarrollador : programacion1.getTripulantes()) {
+        //     System.out.println(desarrollador.getNombre());
+        //     System.out.println("La nota mas alta es: "+ desarrollador.getHighNote());
+        // }
 
             // System.out.println("El promedio de las notas es: " + programacion1.calcularPromedioCurso());
+
+            Vista v = new Vista();
+            v.setVisible(true);
+
     }
 }
