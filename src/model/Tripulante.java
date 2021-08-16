@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 
 /**
  * Tripulante
@@ -11,7 +12,7 @@ public class Tripulante {
     /** Atributos 
      * 
     */
-    
+    public static final int MAXIMO_CURSOS = 4;
     private String nombre;
     private int id;
     private double nota1;
@@ -20,7 +21,30 @@ public class Tripulante {
     private float numeroIdentificacion;
     private String email;
 
+    private ArrayList<Curso>cursos;
+
+    public Tripulante(){
+        super();
+    }
+
+    public Tripulante (String pnombre, int pid, double pnota1, double pnota2, double pnota3, float pnumeroIdentificacion, String pemail) {
+        super();
+        this.nombre = pnombre;
+        this.id = pid;
+        this.nota1 = pnota1;
+        this.nota2 = pnota2;
+        this.nota3 = pnota3;
+        this.numeroIdentificacion = pnumeroIdentificacion;
+        this.email = pemail;
+        cursos = new ArrayList<>();
+
+    }
+
     /** Getters */
+
+    public ArrayList<Curso> getCursos() {
+        return cursos;
+    }
 
     public int getId() {
         return id;
@@ -138,6 +162,12 @@ public class Tripulante {
         }
         return false;
     }
+    public String agregarCurso(Curso t){
 
+        if (cursos.size() == MAXIMO_CURSOS){
+           return "No se puede agregar mas de " + MAXIMO_CURSOS +"Cursos";
+        }   
+            cursos.add(t);
+        return "Curso agregado " + nombre;
 
 }

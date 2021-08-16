@@ -63,8 +63,24 @@ public class Curso {
         }   
             tripulantes.add(t);
         return "Tripulante agregado al curso" + nombre;
-        
-        
+              
+    }
+
+    public double calcularPromedioCurso() throws Exception {
+       
+       if (tripulantes.size() == 0) {
+            throw new Exception("No hay tripulantes en el curso");
+
+       }
+        double  total = 0.0;
+        for(Tripulante tripulante : tripulantes){
+            total += tripulante.getAverage();
+         }
+        // for (int i = 0; i < tripulantes.size(); i++) {
+        //     total += tripulante.get(i).getAverage();
+            
+        // }
+        return total/tripulantes.size();
     }
     
 }

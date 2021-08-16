@@ -2,10 +2,17 @@ import model.Curso;
 import model.Tripulante;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)   {
         
         Curso programacion1 = new Curso(1234, " Fundamentos de programación", 'M', 7400, "dEV 1");
         System.out.println(programacion1.getNombre());
+
+        try {
+            System.out.println(programacion1.calcularPromedioCurso());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        
         Tripulante t1 = new Tripulante();
         t1.setNombre("1er Tripulante");
         t1.setNota1(4);
@@ -40,5 +47,7 @@ public class App {
             System.out.println(desarrollador.getNombre());
             System.out.println("La nota mas alta es: "+ desarrollador.getHighNote());
         }
+
+            // System.out.println("El promedio de las notas es: " + programacion1.calcularPromedioCurso());
     }
 }
