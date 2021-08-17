@@ -20,7 +20,7 @@ public Vista() {
     setLayout(new BorderLayout());
 
     //inicializar
-    panelOpc = new PanelOpciones();
+    panelOpc = new PanelOpciones(this);
 
     //Modificar las propiedades -- por el moemnto no se va a modificar las
 

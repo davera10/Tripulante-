@@ -13,13 +13,16 @@ public class PanelOpciones extends JPanel implements ActionListener {
 
     // creamos la relacion
     private JButton opcion1;
+    private Vista vistaPrincipal;
 
-    public PanelOpciones() {
+    public PanelOpciones(Vista v) {
         super();
 
         setLayout(new GridLayout(1, 3));
-        // inicializar el boton 
 
+        vistaPrincipal = v;
+        
+        // inicializar el boton 
         opcion1 = new JButton(OPCION_1);
        
         //Modificar las propiedades del boton (se agregan acciones al boton)
