@@ -1,6 +1,9 @@
 package view;
 
 import javax.swing.JFrame;
+
+import controller.CursoController;
+
 import java.awt.BorderLayout;
 
 // import model.Curso;
@@ -11,6 +14,7 @@ public class Vista extends JFrame{
     //Relaciones 
 
     private PanelOpciones panelOpc;
+    private CursoController CursoController;
     
 public Vista() {
     super();
@@ -19,6 +23,8 @@ public Vista() {
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setLayout(new BorderLayout());
 
+
+    CursoController = new CursoController();
     //inicializar
     panelOpc = new PanelOpciones(this);
 
@@ -27,6 +33,11 @@ public Vista() {
     //Agregar las propiedades
     add(panelOpc, BorderLayout.SOUTH);
 
+}
+
+public void addCurso(int pCodigo, String pNombre, char pJornada){
+
+    CursoController.addCurso(pCodigo, pNombre, pJornada);
 }
 
     // public static void main(String[] args) {
